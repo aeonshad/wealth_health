@@ -2,15 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    :root {
+        --background: 120 15% 94%; /* Un vert très pâle comme couleur de fond */
+        --foreground: 120 27% 19%; /* Un vert foncé pour le texte */
+        --card: 120 18% 96%; /* Une couleur légèrement plus foncée pour les cartes */
+        --card-foreground: 120 27% 19%; /* Garder une cohérence avec le texte */
+        --popover: 120 18% 96%; /* Fond pour les popovers proche des cartes */
+        --popover-foreground: 120 27% 19%; /* Texte des popovers */
+        --primary: 88 40% 50%; /* Un vert olive comme couleur principale */
+        --primary-foreground: 88 10% 95%; /* Un texte très clair sur fond vert */
+        --secondary: 50 30% 80%; /* Un beige doux pour la couleur secondaire */
+        --secondary-foreground: 50 30% 20%; /* Un brun foncé pour le texte secondaire */
+        --muted: 50 30% 80%; /* Muted dans le même ton que secondary */
+        --muted-foreground: 50 30% 20%; /* Texte dans les tons de brun foncé */
+        --accent: 88 40% 50%; /* Accent dans les mêmes tons que primary */
+        --accent-foreground: 88 10% 95%; /* Texte clair sur accent */
+        --destructive: 0 55% 40%; /* Un rouge moins vif pour les actions destructrices */
+        --destructive-foreground: 0 0% 98%; /* Blanc cassé sur rouge */
+        --border: 120 10% 80%; /* Un vert doux pour les bordures */
+        --input: 120 10% 80%; /* Champs d'entrée dans les mêmes tons que les bordures */
+        --ring: 88 40% 50%; /* Un vert olive pour les éléments focus */
+        --radius: 0.5rem;
+        --chart-1: 88 40% 50%; /* Vert olive pour le premier graphique */
+        --chart-2: 120 27% 19%; /* Vert foncé pour le deuxième graphique */
+        --chart-3: 50 30% 80%; /* Beige pour le troisième graphique */
+        --chart-4: 43 74% 66%; /* Une teinte complémentaire pour varier */
+        --chart-5: 27 87% 67%; /* Une teinte plus vive, jaune-orangée */
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+html {
+    height: 100%;
+}
+
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    height: 100%;
 }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+#root {
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
