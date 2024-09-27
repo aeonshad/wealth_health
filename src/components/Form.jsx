@@ -5,6 +5,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { CalendarDays } from 'lucide-react';
 import Select from 'react-dropdown-select';
+import EmployeeService from '../services/employee-service';
 
 function Form() {
     const {
@@ -16,6 +17,7 @@ function Form() {
 
     const onSubmit = (data) => {
         alert('Submit : ' + JSON.stringify(data, null, 2));
+        EmployeeService.add(data);
     };
 
     return (
@@ -64,17 +66,20 @@ function Form() {
                         className={`text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${
                             errors.dateOfBirth ? 'text-destructive' : ''
                         }`}
-                        htmlFor="startDate"
+                        htmlFor="dateOfBirth"
                     >
                         Date of Birth
                     </label>
                     <div className="relative flex items-center">
                         <Controller
                             control={control}
+                            id="dateOfBirth"
                             name="dateOfBirth"
                             className="w-full"
                             render={({ field }) => (
                                 <DatePicker
+                                    id="dateOfBirth"
+                                    name="dateOfBirth"
                                     className="flex flex-col justify-center items-stretch h-9 w-full rounded-md border border-border bg-input px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
                                     placeholderText="Select date"
                                     onChange={(date) => field.onChange(date)}
@@ -131,16 +136,16 @@ function Form() {
             </fieldset>
             <fieldset className="flex gap-4">
                 <div className="space-y-2 w-1/2">
-                    <label
+                    <span
                         className={`text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${
                             errors.state ? 'text-destructive' : ''
                         }`}
-                        htmlFor="state"
                     >
                         State
-                    </label>
+                    </span>
                     <Controller
                         name="state"
+                        id="state"
                         control={control}
                         render={({ field }) => (
                             <Select
@@ -153,6 +158,7 @@ function Form() {
                                 onChange={(selected) => {
                                     field.onChange(selected[0]?.name);
                                 }}
+                                additionalProps={{ name: 'test', id: 'test' }}
                             />
                         )}
                     />
@@ -181,19 +187,19 @@ function Form() {
             <hr className="h-px my-1 border-border" />
             <fieldset className="flex gap-4">
                 <div className="space-y-2 w-1/2">
-                    <label
+                    <span
                         className={`text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${
                             errors.department ? 'text-destructive' : ''
                         }`}
-                        htmlFor="department"
                     >
                         Department
-                    </label>
+                    </span>
                     <Controller
                         name="department"
                         control={control}
                         render={({ field }) => (
                             <Select
+                                id="department"
                                 options={DEPARTMENT}
                                 searchable={true}
                                 searchBy="name"
@@ -221,9 +227,12 @@ function Form() {
                         <Controller
                             control={control}
                             name="startDate"
+                            id="startDate"
                             className="w-full"
                             render={({ field }) => (
                                 <DatePicker
+                                    name="startDate"
+                                    id="startDate"
                                     className="flex flex-col justify-center items-stretch h-9 w-full rounded-md border border-border bg-input px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
                                     placeholderText="Select date"
                                     onChange={(date) => field.onChange(date)}
