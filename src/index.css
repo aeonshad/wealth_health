@@ -4,57 +4,48 @@
 
 @layer base {
     :root {
-        --background: 120 15% 94%; /* Un vert très pâle comme couleur de fond */
+        --background: 0 0% 100%; /* Un vert très pâle comme couleur de fond */
         --foreground: 120 27% 19%; /* Un vert foncé pour le texte */
-        --card: 120 18% 96%; /* Une couleur légèrement plus foncée pour les cartes */
+        --card: 0 0% 100%; /* Une couleur légèrement plus foncée pour les cartes */
         --card-foreground: 120 27% 19%; /* Garder une cohérence avec le texte */
-        --popover: 120 18% 96%; /* Fond pour les popovers proche des cartes */
+        --popover: 0 0% 100%; /* Fond pour les popovers proche des cartes */
         --popover-foreground: 120 27% 19%; /* Texte des popovers */
-        --primary: 88 40% 50%; /* Un vert olive comme couleur principale */
+        --primary: 70 38% 45%; /* Un vert olive comme couleur principale */
         --primary-foreground: 88 10% 95%; /* Un texte très clair sur fond vert */
         --secondary: 50 30% 80%; /* Un beige doux pour la couleur secondaire */
         --secondary-foreground: 50 30% 20%; /* Un brun foncé pour le texte secondaire */
-        --muted: 50 30% 80%; /* Muted dans le même ton que secondary */
+        --muted: 0 0% 65%; /* Muted dans le même ton que secondary */
         --muted-foreground: 50 30% 20%; /* Texte dans les tons de brun foncé */
-        --accent: 88 40% 50%; /* Accent dans les mêmes tons que primary */
+        --accent: 70 38% 45%; /* Accent dans les mêmes tons que primary */
         --accent-foreground: 88 10% 95%; /* Texte clair sur accent */
         --destructive: 0 55% 40%; /* Un rouge moins vif pour les actions destructrices */
         --destructive-foreground: 0 0% 98%; /* Blanc cassé sur rouge */
-        --border: 120 10% 80%; /* Un vert doux pour les bordures */
-        --input: 120 10% 80%; /* Champs d'entrée dans les mêmes tons que les bordures */
-        --ring: 88 40% 50%; /* Un vert olive pour les éléments focus */
+        --border: 216 12% 84%; /* Un vert doux pour les bordures */
+        --input: 210 20% 98%; /* Champs d'entrée dans les mêmes tons que les bordures */
+        --ring: 70 38% 45%; /* Un vert olive pour les éléments focus */
         --radius: 0.5rem;
-        --chart-1: 88 40% 50%; /* Vert olive pour le premier graphique */
-        --chart-2: 120 27% 19%; /* Vert foncé pour le deuxième graphique */
-        --chart-3: 50 30% 80%; /* Beige pour le troisième graphique */
-        --chart-4: 43 74% 66%; /* Une teinte complémentaire pour varier */
-        --chart-5: 27 87% 67%; /* Une teinte plus vive, jaune-orangée */
+        --selection: ;
     }
     .dark {
-        --background: 120 25% 10%; /* Un vert très foncé pour le fond */
-        --foreground: 120 10% 90%; /* Un vert clair pour le texte */
-        --card: 120 20% 15%; /* Une teinte légèrement plus claire pour les cartes */
-        --card-foreground: 120 10% 90%; /* Texte des cartes */
+        --background: 240 2% 20%; /* couleur base */
+        --foreground: 240 3% 92%; /* couleur base */
+        --card: 240 1% 28%; /* couleur base */
+        --card-foreground: 240 3% 97%; /* couleur text */
         --popover: 120 20% 12%; /* Popover proche du fond */
-        --popover-foreground: 120 10% 90%; /* Texte popover */
-        --primary: 88 40% 45%; /* Un vert olive pour la couleur principale */
+        --popover-foreground: 240 3% 92%; /* Texte popover */
+        --primary: 70 38% 45%; /* Un vert olive pour la couleur principale */
         --primary-foreground: 88 10% 95%; /* Texte très clair pour les éléments primaires */
         --secondary: 50 30% 25%; /* Un beige foncé pour les éléments secondaires */
         --secondary-foreground: 50 10% 95%; /* Texte clair sur les éléments secondaires */
-        --muted: 50 30% 25%; /* Même couleur pour muted */
+        --muted: 0 0% 70%; /* Même couleur pour muted */
         --muted-foreground: 50 10% 95%; /* Texte muted */
-        --accent: 88 40% 45%; /* Accent similaire à primary pour garder une cohérence */
+        --accent: 70 38% 45%; /* Accent similaire à primary pour garder une cohérence */
         --accent-foreground: 88 10% 95%; /* Texte sur l'accent */
         --destructive: 0 55% 40%; /* Rouge plus doux pour les actions destructives */
         --destructive-foreground: 0 0% 95%; /* Texte clair sur rouge */
-        --border: 120 10% 20%; /* Bordures légèrement plus claires que le fond */
-        --input: 120 10% 20%; /* Champs d’entrée */
-        --ring: 88 40% 45%; /* Un anneau vert olive pour les éléments en focus */
-        --chart-1: 88 40% 45%; /* Chart 1 avec un vert olive foncé */
-        --chart-2: 120 27% 19%; /* Chart 2 en vert foncé */
-        --chart-3: 50 30% 25%; /* Chart 3 en beige foncé */
-        --chart-4: 43 74% 66%; /* Chart 4 en teinte complémentaire */
-        --chart-5: 27 87% 67%; /* Chart 5 en jaune-orangée */
+        --border: 240 1% 66%; /* Bordures légèrement plus claires que le fond */
+        --input: 240 1% 55%; /* couleur */
+        --ring: 70 38% 45%; /* Un anneau pour les éléments en focus */
     }
 }
 
@@ -69,6 +60,11 @@
 
 html {
     height: 100%;
+}
+
+input::selection {
+    background-color: hsl(var(--primary)); /* Utilisation de la couleur --primary */
+    color: hsl(var(--primary-foreground)); /* Utilisation de la couleur --primary-foreground */
 }
 
 body {
@@ -89,5 +85,59 @@ code {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+}
+
+.datePicker {
+    width: 100%;
+}
+
+.custom-dropdown {
+    border-radius: calc(0.5rem - 2px) !important;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+}
+
+.custom-dropdown .react-dropdown-select-input {
+    font-size: 14px !important;
+}
+
+.custom-dropdown:focus-within,
+.custom-dropdown:hover {
+    border-color: hsl(var(--ring)) !important;
+}
+
+.custom-dropdown .react-dropdown-select-clear,
+.react-dropdown-select-dropdown-handle {
+    color: hsl(var(--muted));
+    margin: 0 !important;
+}
+
+.custom-dropdown .react-dropdown-select-dropdown {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-height: 180px;
+    overflow: auto;
+    z-index: 9;
+    background: hsl(var(--input));
+    border-radius: calc(0.5rem - 2px) 0px 0px calc(0.5rem - 2px);
+    border: 1px solid hsl(var(--border));
+}
+
+.custom-dropdown .react-dropdown-select-item {
+    color: hsl(var(--card-foreground));
+    border-bottom: 1px solid hsl(var(--border));
+}
+.custom-dropdown .react-dropdown-select-item:hover {
+    background-color: hsl(var(--secondary));
+}
+
+.custom-dropdown .react-dropdown-select-item.react-dropdown-select-item-selected,
+.custom-dropdown .react-dropdown-select-item.react-dropdown-select-item-active {
+    border-bottom: 1px solid hsl(var(--border));
+    color: hsl(var(--foreground));
+    font-weight: bold;
+    background-color: hsl(var(--primary));
 }
 
