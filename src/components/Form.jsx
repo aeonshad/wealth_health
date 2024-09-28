@@ -7,7 +7,7 @@ import { CalendarDays } from 'lucide-react';
 import Select from 'react-dropdown-select';
 import EmployeeService from '../services/employee-service';
 
-function Form() {
+function Form({ openModal }) {
     const {
         register,
         control,
@@ -16,7 +16,7 @@ function Form() {
     } = useForm({ resolver: zodResolver(userSchema) });
 
     const onSubmit = (data) => {
-        alert('Submit : ' + JSON.stringify(data, null, 2));
+        openModal();
         EmployeeService.add(data);
     };
 
