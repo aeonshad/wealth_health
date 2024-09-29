@@ -9,13 +9,13 @@ function App() {
     return (
         <Router>
             <Header />
-            <div className="flex-1">
+            <main className="flex-1">
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/employees" element={<Employees />} />
                     <Route path="/employees/create" element={<CreateEmployee />} />
                 </Routes>
-            </div>
+            </main>
             <Footer />
         </Router>
     );

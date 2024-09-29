@@ -16,7 +16,8 @@ function Form({ openModal }) {
     } = useForm({ resolver: zodResolver(userSchema) });
 
     const onSubmit = (data) => {
-        openModal();
+        //openModal();
+        console.log({ data });
         EmployeeService.add(data);
     };
 
@@ -85,6 +86,7 @@ function Form({ openModal }) {
                                     onChange={(date) => field.onChange(date)}
                                     selected={field.value}
                                     wrapperClassName="datePicker"
+                                    dateFormat="dd-MM-yyyy"
                                 />
                             )}
                         />
@@ -238,6 +240,7 @@ function Form({ openModal }) {
                                     onChange={(date) => field.onChange(date)}
                                     selected={field.value}
                                     wrapperClassName="datePicker"
+                                    dateFormat="dd-MM-yyyy"
                                 />
                             )}
                         />

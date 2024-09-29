@@ -9,12 +9,6 @@ function Footer() {
                     </div>
                     <div className="flex flex-col items-end gap-2 text-sm text-muted-foreground">
                         <a className="hover:underline" href="/">
-                            Privacy
-                        </a>
-                        <a className="hover:underline" href="/">
-                            CGV
-                        </a>
-                        <a className="hover:underline" href="/">
                             Employees
                         </a>
                     </div>

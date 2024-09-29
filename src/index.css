@@ -4,7 +4,7 @@
 
 @layer base {
     :root {
-        --background: 0 0% 100%; /* Un vert très pâle comme couleur de fond */
+        --background: 0 0% 98%; /* Un vert très pâle comme couleur de fond */
         --foreground: 120 27% 19%; /* Un vert foncé pour le texte */
         --card: 0 0% 100%; /* Une couleur légèrement plus foncée pour les cartes */
         --card-foreground: 120 27% 19%; /* Garder une cohérence avec le texte */
@@ -35,7 +35,7 @@
         --popover-foreground: 240 3% 92%; /* Texte popover */
         --primary: 70 38% 45%; /* Un vert olive pour la couleur principale */
         --primary-foreground: 88 10% 95%; /* Texte très clair pour les éléments primaires */
-        --secondary: 50 30% 25%; /* Un beige foncé pour les éléments secondaires */
+        --secondary: 70 10% 40%; /* Un beige foncé pour les éléments secondaires */
         --secondary-foreground: 50 10% 95%; /* Texte clair sur les éléments secondaires */
         --muted: 0 0% 70%; /* Même couleur pour muted */
         --muted-foreground: 50 10% 95%; /* Texte muted */
