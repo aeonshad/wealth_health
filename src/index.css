@@ -18,7 +18,7 @@
         --muted-foreground: 50 30% 20%; /* Texte dans les tons de brun foncé */
         --accent: 70 38% 45%; /* Accent dans les mêmes tons que primary */
         --accent-foreground: 88 10% 95%; /* Texte clair sur accent */
-        --destructive: 0 55% 40%; /* Un rouge moins vif pour les actions destructrices */
+        --destructive: 0 60% 45%; /* Un rouge moins vif pour les actions destructrices */
         --destructive-foreground: 0 0% 98%; /* Blanc cassé sur rouge */
         --border: 216 12% 84%; /* Un vert doux pour les bordures */
         --input: 210 20% 98%; /* Champs d'entrée dans les mêmes tons que les bordures */
@@ -41,7 +41,7 @@
         --muted-foreground: 50 10% 95%; /* Texte muted */
         --accent: 70 38% 45%; /* Accent similaire à primary pour garder une cohérence */
         --accent-foreground: 88 10% 95%; /* Texte sur l'accent */
-        --destructive: 0 55% 40%; /* Rouge plus doux pour les actions destructives */
+        --destructive: 0 55% 55%; /* Rouge plus doux pour les actions destructives */
         --destructive-foreground: 0 0% 95%; /* Texte clair sur rouge */
         --border: 240 1% 66%; /* Bordures légèrement plus claires que le fond */
         --input: 240 1% 55%; /* couleur */

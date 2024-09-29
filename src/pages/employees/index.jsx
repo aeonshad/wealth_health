@@ -1,11 +1,9 @@
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import DataTableEmployees from '../../components/DataTableEmployees';
-import { employees } from '../../data/employees';
 
 function Employees() {
     const employeesStore = useSelector((state) => state.employees);
-    const mergedEmployees = [...employeesStore, ...employees];
 
     return (
         <div className="flex flex-col  justify-center mt-10 max-w-7xl m-auto flex-wrap w-full gap-4 px-4 mb-4">
@@ -22,10 +20,10 @@ function Employees() {
                 </Link>
             </div>
 
-            {mergedEmployees.length > 0 ? (
+            {employeesStore.length > 0 ? (
                 <div className="rounded-xl border border-border bg-card text-card-foreground shadow flex-[2] mb-10">
                     <div className="p-6 pt-0 mt-6">
-                        <DataTableEmployees employees={mergedEmployees} />
+                        <DataTableEmployees employees={employeesStore} />
                     </div>
                 </div>
             ) : (

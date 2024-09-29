@@ -12,7 +12,11 @@ const employeeSlice = createSlice({
             state.employees.push(action.payload);
         },
         removeEmployee: (state, action) => {
-            state.employees.splice(action.payload, 1);
+            const idEmployee = action.payload;
+            state.employees = state.employees.filter((employee) => employee.id !== idEmployee);
+        },
+        resetEmployees: (state, action) => {
+            state.employees = action.payload;
         },
     },
 });

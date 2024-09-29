@@ -1,11 +1,19 @@
+import { v4 as uuidv4 } from 'uuid';
 import store from '../app/store';
-
+import { employees } from '../data/employees';
 class EmployeeService {
     static add(formData) {
-        store.dispatch({ type: 'employee/addEmployee', payload: formData });
+        const formDataWithId = {
+            id: uuidv4(),
+            ...formData,
+        };
+        store.dispatch({ type: 'employee/addEmployee', payload: formDataWithId });
     }
-    static delete(index) {
-        store.dispatch({ type: 'employee/removeEmployee', payload: index });
+    static delete(idEmployee) {
+        store.dispatch({ type: 'employee/removeEmployee', payload: idEmployee });
+    }
+    static reset() {
+        store.dispatch({ type: 'employee/resetEmployees', payload: employees });
     }
 }
 

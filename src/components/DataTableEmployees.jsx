@@ -6,7 +6,6 @@ import { tableCustomStyles } from './customStyle';
 function DataTableEmployees({ employees }) {
     const [data, setData] = useState(employees);
     const [search, setSearch] = useState('');
-
     useEffect(() => {
         if (search.length > 0) {
             const result = employees.filter((item) => {
@@ -16,7 +15,7 @@ function DataTableEmployees({ employees }) {
         } else {
             setData(employees);
         }
-    }, [search]);
+    }, [search, employees]);
 
     return (
         <DataTable

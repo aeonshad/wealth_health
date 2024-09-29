@@ -1,3 +1,4 @@
+import EmployeeService from '../services/employee-service';
 import { dateFormat } from './formatDate';
 
 export const columns = [
@@ -25,6 +26,7 @@ export const columns = [
         sortable: true,
         wrap: true,
         name: 'Street',
+        grow: 1.3,
     },
     {
         selector: (row) => row.city,
@@ -37,6 +39,7 @@ export const columns = [
         sortable: true,
         wrap: true,
         name: 'State',
+        grow: 1.1,
     },
     {
         selector: (row) => row.zipCode,
@@ -49,12 +52,26 @@ export const columns = [
         format: (row) => dateFormat(row.startDate),
         sortable: true,
         wrap: true,
-        name: 'StatDate',
+        name: 'StartDate',
     },
     {
         selector: (row) => row.department,
         sortable: true,
         wrap: true,
         name: 'Department',
+        grow: 1.2,
+    },
+    {
+        cell: (row) => (
+            <button
+                className="whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-destructive hover:text-destructive/80 h-6 px-3 bg-background"
+                onClick={() => EmployeeService.delete(row.id)}
+            >
+                Delete
+            </button>
+        ),
+        ignoreRowClick: false,
+        button: 'true',
+        name: 'Actions',
     },
 ];

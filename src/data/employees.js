@@ -1,5 +1,8 @@
+import { v4 as uuidv4 } from 'uuid';
+
 export const employees = [
     {
+        id: uuidv4(),
         firstname: 'John',
         lastname: 'Doe',
         dateOfBirth: new Date(1985, 6, 15),
@@ -11,6 +14,7 @@ export const employees = [
         department: 'Engineering',
     },
     {
+        id: uuidv4(),
         firstname: 'Jane',
         lastname: 'Smith',
         dateOfBirth: new Date(1990, 1, 20),
@@ -22,6 +26,7 @@ export const employees = [
         department: 'Human Resources',
     },
     {
+        id: uuidv4(),
         firstname: 'Michael',
         lastname: 'Johnson',
         dateOfBirth: new Date(1975, 11, 5),
@@ -33,6 +38,7 @@ export const employees = [
         department: 'Marketing',
     },
     {
+        id: uuidv4(),
         firstname: 'Emily',
         lastname: 'Williams',
         dateOfBirth: new Date(1988, 2, 10),
@@ -44,6 +50,7 @@ export const employees = [
         department: 'Finance',
     },
     {
+        id: uuidv4(),
         firstname: 'James',
         lastname: 'Brown',
         dateOfBirth: new Date(1982, 9, 25),
@@ -55,6 +62,7 @@ export const employees = [
         department: 'Legal',
     },
     {
+        id: uuidv4(),
         firstname: 'Olivia',
         lastname: 'Jones',
         dateOfBirth: new Date(1993, 4, 15),
@@ -66,6 +74,7 @@ export const employees = [
         department: 'Sales',
     },
     {
+        id: uuidv4(),
         firstname: 'Lucas',
         lastname: 'Garcia',
         dateOfBirth: new Date(1986, 7, 21),
@@ -77,6 +86,7 @@ export const employees = [
         department: 'Engineering',
     },
     {
+        id: uuidv4(),
         firstname: 'Sophia',
         lastname: 'Martinez',
         dateOfBirth: new Date(1995, 5, 30),
@@ -88,6 +98,7 @@ export const employees = [
         department: 'Customer Service',
     },
     {
+        id: uuidv4(),
         firstname: 'David',
         lastname: 'Miller',
         dateOfBirth: new Date(1979, 3, 12),
@@ -99,6 +110,7 @@ export const employees = [
         department: 'Finance',
     },
     {
+        id: uuidv4(),
         firstname: 'Isabella',
         lastname: 'Rodriguez',
         dateOfBirth: new Date(1984, 0, 6),
@@ -110,6 +122,7 @@ export const employees = [
         department: 'Engineering',
     },
     {
+        id: uuidv4(),
         firstname: 'Ethan',
         lastname: 'Lopez',
         dateOfBirth: new Date(1992, 8, 22),
@@ -121,6 +134,7 @@ export const employees = [
         department: 'Marketing',
     },
     {
+        id: uuidv4(),
         firstname: 'Ava',
         lastname: 'Wilson',
         dateOfBirth: new Date(1989, 6, 17),
@@ -132,6 +146,7 @@ export const employees = [
         department: 'Human Resources',
     },
     {
+        id: uuidv4(),
         firstname: 'Daniel',
         lastname: 'Hernandez',
         dateOfBirth: new Date(1981, 10, 9),
@@ -143,6 +158,7 @@ export const employees = [
         department: 'Legal',
     },
     {
+        id: uuidv4(),
         firstname: 'Mia',
         lastname: 'King',
         dateOfBirth: new Date(1994, 11, 27),
@@ -154,6 +170,7 @@ export const employees = [
         department: 'Sales',
     },
     {
+        id: uuidv4(),
         firstname: 'Jacob',
         lastname: 'Lee',
         dateOfBirth: new Date(1973, 8, 2),
@@ -165,6 +182,7 @@ export const employees = [
         department: 'Customer Service',
     },
     {
+        id: uuidv4(),
         firstname: 'Amelia',
         lastname: 'Walker',
         dateOfBirth: new Date(1987, 2, 18),
@@ -176,6 +194,7 @@ export const employees = [
         department: 'Engineering',
     },
     {
+        id: uuidv4(),
         firstname: 'Logan',
         lastname: 'Young',
         dateOfBirth: new Date(1983, 5, 30),
@@ -187,6 +206,7 @@ export const employees = [
         department: 'Legal',
     },
     {
+        id: uuidv4(),
         firstname: 'Lily',
         lastname: 'Allen',
         dateOfBirth: new Date(1996, 0, 12),
@@ -198,6 +218,7 @@ export const employees = [
         department: 'Sales',
     },
     {
+        id: uuidv4(),
         firstname: 'Henry',
         lastname: 'Hall',
         dateOfBirth: new Date(1980, 10, 20),
@@ -209,6 +230,7 @@ export const employees = [
         department: 'Finance',
     },
     {
+        id: uuidv4(),
         firstname: 'Grace',
         lastname: 'Scott',
         dateOfBirth: new Date(1985, 4, 17),
