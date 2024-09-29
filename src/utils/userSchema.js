@@ -37,10 +37,7 @@ export const userSchema = z.object({
             invalid_type_error: 'Please select a valid state',
         }
     ),
-    zipCode: z
-        .string({ required_error: 'Zip code is required' })
-        .min(5, 'Zip code must contain at least 5 characters')
-        .max(10, 'Zip code cannot exceed 10 characters'),
+    zipCode: z.string({ required_error: 'Zip code is required' }).regex(/^\d{5}$/, 'Zip code must be a 5-digit number and contain only digits'),
     department: z.enum(
         DEPARTMENT.map((department) => department.name),
         {

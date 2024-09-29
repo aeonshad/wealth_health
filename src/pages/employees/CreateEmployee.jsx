@@ -4,7 +4,7 @@ import { Modal, ModalContent, ModalHeader, ModalTitle, ModalDescription, ModalFo
 import '../../index.css';
 
 function CreateEmployee() {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
         <div className="max-w-3xl flex-wrap w-full flex gap-4 m-auto px-4 mt-4 mb-4">
